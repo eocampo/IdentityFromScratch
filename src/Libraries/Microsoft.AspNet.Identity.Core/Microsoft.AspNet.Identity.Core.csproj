@@ -7,7 +7,7 @@
     <ProjectGuid>{FC089D37-C2EB-4188-A1AC-D45866A07EC4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Microsoft.AspNet.Identity.Core</RootNamespace>
+    <RootNamespace>Microsoft.AspNet.Identity</RootNamespace>
     <AssemblyName>Microsoft.AspNet.Identity.Core</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -36,6 +36,7 @@
     <Reference Include="System.Security" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IUser.cs" />
     <Compile Include="UserManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

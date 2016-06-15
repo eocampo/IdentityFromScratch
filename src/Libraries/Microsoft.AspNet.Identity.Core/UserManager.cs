@@ -9,7 +9,7 @@ using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Microsoft.AspNet.Identity.Core
+namespace Microsoft.AspNet.Identity
 {
     public class UserManager
     {
