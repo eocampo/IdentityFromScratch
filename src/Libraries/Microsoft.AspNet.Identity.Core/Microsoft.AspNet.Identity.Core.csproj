@@ -46,10 +46,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IQueryableRoleStore.cs" />
+    <Compile Include="IQueryableUserStore.cs" />
     <Compile Include="IRole.cs" />
     <Compile Include="IRoleStore.cs" />
     <Compile Include="IUser.cs" />
+    <Compile Include="IUserClaimStore.cs" />
+    <Compile Include="IUserEmailStore.cs" />
+    <Compile Include="IUserLockoutStore.cs" />
+    <Compile Include="IUserLoginStore.cs" />
+    <Compile Include="IUserPasswordStore.cs" />
+    <Compile Include="IUserPhoneNumberStore.cs" />
+    <Compile Include="IUserRoleStore.cs" />
+    <Compile Include="IUserSecurityStampStore.cs" />
+    <Compile Include="IUserStore.cs" />
+    <Compile Include="IUserTwoFactorStore.cs" />
     <Compile Include="TaskExtensions.cs" />
+    <Compile Include="UserLoginInfo.cs" />
     <Compile Include="UserManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
