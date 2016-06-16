@@ -81,7 +81,11 @@
     <Compile Include="PasswordValidator.cs" />
     <Compile Include="PasswordVerificationResult.cs" />
     <Compile Include="PhoneNumberTokenProvider.cs" />
-    <Compile Include="Resources.Designer.cs" />
+    <Compile Include="Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Rfc6238AuthenticationService.cs" />
     <Compile Include="RoleManager.cs" />
     <Compile Include="RoleValidator.cs" />
@@ -96,7 +100,10 @@
     <None Include="35MSSharedLib1024.snk" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Resources.resx" />
+    <EmbeddedResource Include="Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
