@@ -45,6 +45,16 @@
     <Reference Include="System.Security" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AsyncHelper.cs" />
+    <Compile Include="ClaimsIdentityFactory.cs" />
+    <Compile Include="Crypto.cs" />
+    <Compile Include="DefaultAuthenticationTypes.cs" />
+    <Compile Include="Extensions\IdentityExtensions.cs" />
+    <Compile Include="IClaimsIdentityFactory.cs" />
+    <Compile Include="IdentityResult.cs" />
+    <Compile Include="IIdentityMessageService.cs" />
+    <Compile Include="IIdentityValidator.cs" />
+    <Compile Include="IPasswordHasher.cs" />
     <Compile Include="IQueryableRoleStore.cs" />
     <Compile Include="IQueryableUserStore.cs" />
     <Compile Include="IRole.cs" />
@@ -59,14 +69,27 @@
     <Compile Include="IUserRoleStore.cs" />
     <Compile Include="IUserSecurityStampStore.cs" />
     <Compile Include="IUserStore.cs" />
+    <Compile Include="IUserTokenProvider.cs" />
     <Compile Include="IUserTwoFactorStore.cs" />
+    <Compile Include="MinimumLengthValidator.cs" />
+    <Compile Include="PasswordHasher.cs" />
+    <Compile Include="PasswordValidator.cs" />
+    <Compile Include="PasswordVerificationResult.cs" />
+    <Compile Include="Resources.Designer.cs" />
+    <Compile Include="Rfc6238AuthenticationService.cs" />
+    <Compile Include="RoleManager.cs" />
+    <Compile Include="RoleValidator.cs" />
     <Compile Include="TaskExtensions.cs" />
     <Compile Include="UserLoginInfo.cs" />
     <Compile Include="UserManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserValidator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="35MSSharedLib1024.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources.resx" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
