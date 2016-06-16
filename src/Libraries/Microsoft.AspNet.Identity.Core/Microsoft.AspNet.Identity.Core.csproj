@@ -49,7 +49,12 @@
     <Compile Include="ClaimsIdentityFactory.cs" />
     <Compile Include="Crypto.cs" />
     <Compile Include="DefaultAuthenticationTypes.cs" />
+    <Compile Include="EmailTokenProvider.cs" />
     <Compile Include="Extensions\IdentityExtensions.cs" />
+    <Compile Include="Extensions\IIdentityMessageServiceExtensions.cs" />
+    <Compile Include="Extensions\RoleManagerExtensions.cs" />
+    <Compile Include="Extensions\UserManagerExtensions.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="IClaimsIdentityFactory.cs" />
     <Compile Include="IdentityResult.cs" />
     <Compile Include="IIdentityMessageService.cs" />
@@ -75,11 +80,13 @@
     <Compile Include="PasswordHasher.cs" />
     <Compile Include="PasswordValidator.cs" />
     <Compile Include="PasswordVerificationResult.cs" />
+    <Compile Include="PhoneNumberTokenProvider.cs" />
     <Compile Include="Resources.Designer.cs" />
     <Compile Include="Rfc6238AuthenticationService.cs" />
     <Compile Include="RoleManager.cs" />
     <Compile Include="RoleValidator.cs" />
     <Compile Include="TaskExtensions.cs" />
+    <Compile Include="TotpSecurityStampBasedTokenProvider.cs" />
     <Compile Include="UserLoginInfo.cs" />
     <Compile Include="UserManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
