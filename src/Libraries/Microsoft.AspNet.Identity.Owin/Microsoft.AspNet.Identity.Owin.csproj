@@ -63,9 +63,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataProtectorTokenProvider.cs" />
+    <Compile Include="Extensions\AppBuilderExtensions.cs" />
     <Compile Include="Extensions\AuthenticationManagerExtensions.cs" />
+    <Compile Include="Extensions\OwinContextExtensions.cs" />
+    <Compile Include="Extensions\SignInManagerExtensions.cs" />
     <Compile Include="ExternalLoginInfo.cs" />
     <Compile Include="GlobalSuppressions.cs" />
+    <Compile Include="IdentityFactoryMiddleware.cs" />
+    <Compile Include="IdentityFactoryOptions.cs" />
+    <Compile Include="IdentityFactoryProvider.cs" />
+    <Compile Include="IIdentityFactoryProvider.cs" />
+    <Compile Include="SecurityStampValidator.cs" />
     <Compile Include="SignInManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SignInStatus.cs" />
