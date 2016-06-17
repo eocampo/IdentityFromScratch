@@ -1,29 +1,29 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
+using System.Security.Claims;
 using System.Web;
 using System.Web.Mvc;
-using System.Threading.Tasks;
-using Microsoft.AspNet.Identity;
-using Microsoft.AspNet.Identity.Owin;
-using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Owin.Security;
+using Microsoft.AspNet.Identity;
 using IdentityFromScratchWebApp01.Models;
-using System.Security.Claims;
 
 namespace IdentityFromScratchWebApp01.Controllers
 {
     [Authorize]
     public class AccountController : Controller
-    { 
-        // GET: /Account/Login
+    {
+        private IAuthenticationManager AuthenticationManager {
+            get {
+                return HttpContext.GetOwinContext().Authentication;
+            }
+        }    
+        
         [AllowAnonymous]
         public ActionResult Login(string returnUrl) {
             ViewBag.ReturnUrl = returnUrl;
             return View();
         }
-
-        // POST: /Account/Login
+        
         [HttpPost]
         [AllowAnonymous]        
         public ActionResult Login(LoginViewModel model, string returnUrl) {
@@ -47,17 +47,10 @@ namespace IdentityFromScratchWebApp01.Controllers
             }
             return View(model);            
         }
-
-        // GET: /Account/LogOff        
+        
         public ActionResult LogOff() {
             AuthenticationManager.SignOut(DefaultAuthenticationTypes.ApplicationCookie);            
             return RedirectToAction("Index", "Home");
-        }
-
-        private IAuthenticationManager AuthenticationManager {
-            get {
-                return HttpContext.GetOwinContext().Authentication;
-            }
-        }           
+        }      
     }
 }
