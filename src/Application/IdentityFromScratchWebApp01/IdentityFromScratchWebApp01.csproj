@@ -142,17 +142,9 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Libraries\Microsoft.AspNet.Identity.Core\Microsoft.AspNet.Identity.Core.csproj">
-      <Project>{fc089d37-c2eb-4188-a1ac-d45866a07ec4}</Project>
-      <Name>Microsoft.AspNet.Identity.Core</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Libraries\Microsoft.AspNet.Identity.EntityFramework\Microsoft.AspNet.Identity.EntityFramework.csproj">
-      <Project>{da8da013-a809-42dc-87ef-f229d6d17801}</Project>
-      <Name>Microsoft.AspNet.Identity.EntityFramework</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\Libraries\Microsoft.AspNet.Identity.Owin\Microsoft.AspNet.Identity.Owin.csproj">
-      <Project>{4499bf0a-d40d-4680-9516-f0b93c7fb506}</Project>
-      <Name>Microsoft.AspNet.Identity.Owin</Name>
+    <ProjectReference Include="..\..\Libraries\ForWebApp01\Microsoft.AspNet.Identity.Core001\Microsoft.AspNet.Identity.Core001.csproj">
+      <Project>{33a40a15-db20-4549-a26f-ed113e8d2a7d}</Project>
+      <Name>Microsoft.AspNet.Identity.Core001</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
