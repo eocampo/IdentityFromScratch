@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.AspNet.Identity.O
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.AspNet.Identity.EntityFramework002", "Libraries\ForWebApp02\Microsoft.AspNet.Identity.EntityFramework002\Microsoft.AspNet.Identity.EntityFramework002.csproj", "{1DC09EA0-E8FA-44B3-B8DB-759CE5B489F9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityFromScratchWebApp03", "Application\IdentityFromScratchWebApp03\IdentityFromScratchWebApp03.csproj", "{50C4ACA7-7F16-43C4-BAE6-F1843AE6CED1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -77,6 +79,10 @@ Global
 		{1DC09EA0-E8FA-44B3-B8DB-759CE5B489F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1DC09EA0-E8FA-44B3-B8DB-759CE5B489F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1DC09EA0-E8FA-44B3-B8DB-759CE5B489F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50C4ACA7-7F16-43C4-BAE6-F1843AE6CED1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50C4ACA7-7F16-43C4-BAE6-F1843AE6CED1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50C4ACA7-7F16-43C4-BAE6-F1843AE6CED1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50C4ACA7-7F16-43C4-BAE6-F1843AE6CED1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -94,5 +100,6 @@ Global
 		{C5EDE9F6-D47C-4BC2-8235-51F293C1BE8C} = {452FA235-3DEB-4E0B-A045-4007854FFBDD}
 		{F32E09F6-191C-4FA0-A7E7-CDF03C5E63FD} = {9B172843-D29B-4536-9539-BFFDAE46FB04}
 		{1DC09EA0-E8FA-44B3-B8DB-759CE5B489F9} = {9B172843-D29B-4536-9539-BFFDAE46FB04}
+		{50C4ACA7-7F16-43C4-BAE6-F1843AE6CED1} = {452FA235-3DEB-4E0B-A045-4007854FFBDD}
 	EndGlobalSection
 EndGlobal
