@@ -38,6 +38,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="Microsoft.Owin, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
@@ -132,6 +140,7 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Account\Register.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\FilterConfig.cs" />
@@ -140,6 +149,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Models\LoginViewModel.cs" />
+    <Compile Include="Models\RegisterViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -153,6 +163,14 @@
     <ProjectReference Include="..\..\Libraries\ForWebApp02\Microsoft.AspNet.Identity.Core002\Microsoft.AspNet.Identity.Core002.csproj">
       <Project>{44b7de23-46b6-4c5d-bb06-de1a25c2e2c5}</Project>
       <Name>Microsoft.AspNet.Identity.Core002</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Libraries\ForWebApp02\Microsoft.AspNet.Identity.EntityFramework002\Microsoft.AspNet.Identity.EntityFramework002.csproj">
+      <Project>{1dc09ea0-e8fa-44b3-b8db-759ce5b489f9}</Project>
+      <Name>Microsoft.AspNet.Identity.EntityFramework002</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Libraries\ForWebApp02\Microsoft.AspNet.Identity.Owin002\Microsoft.AspNet.Identity.Owin002.csproj">
+      <Project>{f32e09f6-191c-4fa0-a7e7-cdf03c5e63fd}</Project>
+      <Name>Microsoft.AspNet.Identity.Owin002</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
