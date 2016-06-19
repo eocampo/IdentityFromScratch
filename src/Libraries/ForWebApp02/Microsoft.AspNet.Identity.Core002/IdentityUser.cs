@@ -6,13 +6,8 @@ using System.Threading.Tasks;
 
 namespace Microsoft.AspNet.Identity
 {
-    public class IdentityUser : IUser
+    public class IdentityUser 
     {
-        //private string id;
-        //public string Id {
-        //    get { return id; }
-        //}
-
         public IdentityUser() {
             Id = Guid.NewGuid().ToString();
         }

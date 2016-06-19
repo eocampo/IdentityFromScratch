@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Microsoft.AspNet.Identity
 {
-    public class IdentityRole : IRole
+    public class IdentityRole
     {
         public string Id { get; set; }
         public string Name { get; set; }

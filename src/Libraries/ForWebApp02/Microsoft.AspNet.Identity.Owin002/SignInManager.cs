@@ -39,7 +39,7 @@ namespace Microsoft.AspNet.Identity.Owin
             return SignInStatus.Failure;
         }
 
-        public virtual SignInStatus SignIn(IUser user, bool isPersistent, bool rememberBrowser = false) {
+        public virtual SignInStatus SignIn(IdentityUser user, bool isPersistent, bool rememberBrowser = false) {
             var identity = new ClaimsIdentity(new[] {
                 new Claim(ClaimTypes.Name, user.UserName),
             },
