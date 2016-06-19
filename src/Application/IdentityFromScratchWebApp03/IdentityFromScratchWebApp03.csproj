@@ -167,6 +167,14 @@
       <Project>{1fda54c8-c8ab-45c8-b734-98ea1b64fbe9}</Project>
       <Name>Microsoft.AspNet.Identity.Core003</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\Libraries\ForWebApp03\Microsoft.AspNet.Identity.EntityFramework003\Microsoft.AspNet.Identity.EntityFramework003.csproj">
+      <Project>{786c9d5d-b5bb-4ef7-8bd8-146d4b631ff8}</Project>
+      <Name>Microsoft.AspNet.Identity.EntityFramework003</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Libraries\ForWebApp03\Microsoft.AspNet.Identity.Owin003\Microsoft.AspNet.Identity.Owin003.csproj">
+      <Project>{48c7d219-6f36-463f-b35f-257ca59db9df}</Project>
+      <Name>Microsoft.AspNet.Identity.Owin003</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
