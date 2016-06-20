@@ -7,7 +7,7 @@ using System.Security.Cryptography;
 
 namespace Microsoft.AspNet.Identity
 {
-    internal static class Crypto
+    public static class Crypto
     {
         private const int PBKDF2IterCount = 1000; // default for Rfc2898DeriveBytes
         private const int PBKDF2SubkeyLength = 256 / 8; // 256 bits

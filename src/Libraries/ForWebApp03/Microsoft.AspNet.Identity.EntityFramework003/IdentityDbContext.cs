@@ -13,6 +13,38 @@ using System.Threading.Tasks;
 
 namespace Microsoft.AspNet.Identity.EntityFramework
 {
+    /// <summary>
+    /// Default IdentityDbContext that uses the default entity types for ASP.NET Identity Users, Roles, Claims, Logins. 
+    /// Use this overload to add your own entity types.
+    /// </summary>
+    public class IdentityDbContext :
+        IdentityDbContext<IdentityUser, IdentityRole, string, IdentityUserRole>
+    {
+        public IdentityDbContext()
+            : this("DefaultConnection") {
+        }
+
+        public IdentityDbContext(string nameOrConnectionString)
+            : base(nameOrConnectionString) {
+        }
+
+        //public IdentityDbContext(DbConnection existingConnection, DbCompiledModel model, bool contextOwnsConnection)
+        //    : base(existingConnection, model, contextOwnsConnection) {
+        //}
+
+        //public IdentityDbContext(DbCompiledModel model)
+        //    : base(model) {
+        //}
+
+        //public IdentityDbContext(DbConnection existingConnection, bool contextOwnsConnection)
+        //    : base(existingConnection, contextOwnsConnection) {
+        //}
+
+        //public IdentityDbContext(string nameOrConnectionString, DbCompiledModel model)
+        //    : base(nameOrConnectionString, model) {
+        //}
+    }
+
     public class IdentityDbContext<TUser, TRole, TKey, TUserRole> : DbContext
         where TUser : IdentityUser<TKey, TUserRole>
         where TRole : IdentityRole<TKey, TUserRole>
@@ -27,25 +59,25 @@ namespace Microsoft.AspNet.Identity.EntityFramework
             //Database.SetInitializer<IdentityDbContext>(new DropCreateDatabaseIfModelChanges<IdentityDbContext>());
         }
 
-        public IdentityDbContext(DbConnection existingConnection, DbCompiledModel model, bool contextOwnsConnection)
-            : base(existingConnection, model, contextOwnsConnection) {
-            //Database.SetInitializer<IdentityDbContext>(new DropCreateDatabaseIfModelChanges<IdentityDbContext>());
-        }
+        //public IdentityDbContext(DbConnection existingConnection, DbCompiledModel model, bool contextOwnsConnection)
+        //    : base(existingConnection, model, contextOwnsConnection) {
+        //    //Database.SetInitializer<IdentityDbContext>(new DropCreateDatabaseIfModelChanges<IdentityDbContext>());
+        //}
 
-        public IdentityDbContext(DbCompiledModel model)
-            : base(model) {
-            //Database.SetInitializer<IdentityDbContext>(new DropCreateDatabaseIfModelChanges<IdentityDbContext>());
-        }
+        //public IdentityDbContext(DbCompiledModel model)
+        //    : base(model) {
+        //    //Database.SetInitializer<IdentityDbContext>(new DropCreateDatabaseIfModelChanges<IdentityDbContext>());
+        //}
 
-        public IdentityDbContext(DbConnection existingConnection, bool contextOwnsConnection)
-            : base(existingConnection, contextOwnsConnection) {
-            //Database.SetInitializer<IdentityDbContext>(new DropCreateDatabaseIfModelChanges<IdentityDbContext>());
-        }
+        //public IdentityDbContext(DbConnection existingConnection, bool contextOwnsConnection)
+        //    : base(existingConnection, contextOwnsConnection) {
+        //    //Database.SetInitializer<IdentityDbContext>(new DropCreateDatabaseIfModelChanges<IdentityDbContext>());
+        //}
 
-        public IdentityDbContext(string nameOrConnectionString, DbCompiledModel model)
-            : base(nameOrConnectionString, model) {
-            //Database.SetInitializer<IdentityDbContext>(new DropCreateDatabaseIfModelChanges<IdentityDbContext>());
-        }
+        //public IdentityDbContext(string nameOrConnectionString, DbCompiledModel model)
+        //    : base(nameOrConnectionString, model) {
+        //    //Database.SetInitializer<IdentityDbContext>(new DropCreateDatabaseIfModelChanges<IdentityDbContext>());
+        //}
 
         public virtual IDbSet<TUser> Users { get; set; }
         public virtual IDbSet<TRole> Roles { get; set; }

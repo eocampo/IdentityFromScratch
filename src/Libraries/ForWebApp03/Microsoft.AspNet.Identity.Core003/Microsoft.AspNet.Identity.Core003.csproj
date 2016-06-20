@@ -38,9 +38,13 @@
     <Compile Include="Crypto.cs" />
     <Compile Include="DefaultAuthenticationTypes.cs" />
     <Compile Include="Extensions\IdentityExtensions.cs" />
+    <Compile Include="IdentityResult.cs" />
+    <Compile Include="IQueryableRoleStore.cs" />
+    <Compile Include="IQueryableUserStore.cs" />
     <Compile Include="IRole.cs" />
     <Compile Include="IRoleStore.cs" />
     <Compile Include="IUser.cs" />
+    <Compile Include="IUserRoleStore.cs" />
     <Compile Include="IUserStore.cs" />
     <Compile Include="RoleManager.cs" />
     <Compile Include="UserManager.cs" />

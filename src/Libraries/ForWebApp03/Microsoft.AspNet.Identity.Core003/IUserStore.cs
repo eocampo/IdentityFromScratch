@@ -20,5 +20,9 @@ namespace Microsoft.AspNet.Identity
 
         TUser FindById(TKey userId);
         TUser FindByName(string userName);
+
+        bool VerifyPassword(TUser user, string password);
+
+        bool SetPassword(TUser user, string password);
     }
 }
