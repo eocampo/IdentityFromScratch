@@ -48,6 +48,12 @@ namespace IdentityFromScratchWebApp03.Controllers
             }
         }
 
+        [AllowAnonymous]
+        public ActionResult Login(string returnUrl) {
+            ViewBag.ReturnUrl = returnUrl;
+            return View();
+        }
+
         [HttpPost]
         [AllowAnonymous]
         public ActionResult Login(LoginViewModel model, string returnUrl) {

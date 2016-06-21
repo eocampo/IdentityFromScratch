@@ -60,6 +60,11 @@ namespace Microsoft.AspNet.Identity.Owin
             return SignInStatus.Failure;
         }
 
+        internal const string IdentityProviderClaimType =            
+            "http://schemas.microsoft.com/accesscontrolservice/2010/07/claims/identityprovider";
+        internal const string DefaultIdentityProviderClaimValue = "ASP.NET Identity";
+        // "http://schemas.microsoft.com/ws/2008/06/identity/claims/role"
+
         public virtual SignInStatus SignIn(TUser user, bool isPersistent, bool rememberBrowser = false) {
             var identity = new ClaimsIdentity(new[] {
                 new Claim(ClaimTypes.Name, user.UserName),
@@ -67,8 +72,15 @@ namespace Microsoft.AspNet.Identity.Owin
             DefaultAuthenticationTypes.ApplicationCookie,
             ClaimTypes.Name, ClaimTypes.Role);
 
-            identity.AddClaim(new Claim(ClaimTypes.NameIdentifier, Convert.ToString(user.Id, CultureInfo.InvariantCulture) ));
-            identity.AddClaim(new Claim(ClaimTypes.Role, "guest"));
+            // Acording to ClaimsIdentityFactory line 88:
+            identity.AddClaim(new Claim(ClaimTypes.NameIdentifier, Convert.ToString(user.Id, CultureInfo.InvariantCulture) ));            
+            identity.AddClaim(new Claim(IdentityProviderClaimType, DefaultIdentityProviderClaimValue, ClaimValueTypes.String));
+            //identity.AddClaim(new Claim(ClaimTypes.Role, "guest"));
+            var roles = this.UserManager.GetRoles(user.Id);
+            foreach (string roleName in roles) {
+                identity.AddClaim(new Claim(ClaimsIdentity.DefaultRoleClaimType, roleName, ClaimValueTypes.String));
+            }
+
             
             AuthenticationManager.SignIn(new AuthenticationProperties {
                 IsPersistent = isPersistent

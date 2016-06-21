@@ -151,6 +151,17 @@ namespace Microsoft.AspNet.Identity
 
 
 
+        public virtual IList<string> GetRoles(TKey userId) {
+            ThrowIfDisposed();
+            var userRoleStore = GetUserRoleStore();
+            var user = FindById(userId);
+            if (user == null) {
+                throw new InvalidOperationException(String.Format(CultureInfo.CurrentCulture, "UserId not found.",
+                    userId));
+            }
+            return userRoleStore.GetRoles(user);
+        }
+
         private IUserRoleStore<TUser, TKey> GetUserRoleStore() {
             var cast = Store as IUserRoleStore<TUser, TKey>;
             if (cast == null) {
